@@ -2,22 +2,20 @@
    FONDASI & VARIABEL TEMA (LIGHT/DARK)
 ========================================= */
 :root {
-    /* Tema Terang (Default) */
     --bg-color: #f8f9fa;
     --text-color: #2b2d42;
     --card-bg: #ffffff;
-    --accent-color: #4a5d4e; /* Olive/Khaki tone */
+    --accent-color: #4a5d4e; 
     --hover-color: #8d99ae;
     --nav-bg: rgba(255, 255, 255, 0.95);
     --border-color: #e0e0e0;
 }
 
 body.dark-mode {
-    /* Tema Gelap */
     --bg-color: #121212;
     --text-color: #f8f9fa;
     --card-bg: #1e1e1e;
-    --accent-color: #f4a261; /* Kontras hangat untuk dark mode */
+    --accent-color: #f4a261; 
     --hover-color: #cccccc;
     --nav-bg: rgba(18, 18, 18, 0.95);
     --border-color: #333333;
@@ -94,16 +92,26 @@ header {
 }
 
 /* =========================================
-   BAGIAN HERO (BERANDA)
+   BAGIAN HERO & FOTO PROFIL
 ========================================= */
 .hero {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 0 2rem;
-    margin-top: 2rem; /* Menyesuaikan agar tidak tertutup navbar */
+    padding: 100px 2rem 0; 
+}
+
+/* Desain Foto Profil Bulat */
+.profile-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%; 
+    object-fit: cover; 
+    border: 4px solid var(--accent-color);
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .hero h3 {
@@ -119,7 +127,7 @@ header {
 }
 
 .typing-text {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 400;
     margin-bottom: 30px;
 }
@@ -146,7 +154,7 @@ header {
     font-weight: bold;
     border: none;
     cursor: pointer;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .btn-download:hover {

@@ -5,52 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio | Waskita Zaenal Abidin</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Library icon untuk logo LinkedIn, GitHub, Bulan/Matahari -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <!-- Navbar -->
     <header>
         <nav class="navbar">
             <div class="logo">WK.</div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <!-- Tombol Dark/Light Mode -->
             <button id="theme-toggle" class="btn-theme"><i class="fas fa-moon"></i></button>
         </nav>
     </header>
 
+    <!-- Bagian Hero / Profil Awal -->
     <section id="home" class="hero">
         <div class="hero-content">
+            <!-- Foto Profil -->
+            <img src="assets/foto.png" alt="Foto Profil Waskita" class="profile-img"> 
+            
             <h3>Halo, perkenalkan saya</h3>
             <h1>Waskita Zaenal Abidin</h1>
-            <h2 class="typing-text">Mahasiswa Teknologi Rekayasa Otomasi</h2>
+            <h2 class="typing-text">Mahasiswa Teknologi Rekayasa Otomasi & Tech Enthusiast</h2>
+            
             <div class="social-icons">
                 <a href="#"><i class="fab fa-github"></i></a>
                 <a href="#"><i class="fab fa-linkedin"></i></a>
                 <a href="#"><i class="fab fa-instagram"></i></a>
             </div>
             <br>
+            <!-- Tombol Unduh CV -->
             <a href="assets/CV_Waskita.pdf" download class="btn-download">Download CV <i class="fas fa-download"></i></a>
         </div>
     </section>
 
+    <!-- Bagian Pengalaman (Experience) -->
     <section id="experience" class="section">
         <h2 class="section-title">Experience</h2>
         <div class="grid-container">
             <div class="card">
+                <i class="fas fa-building icon-large"></i>
                 <h3>CEO - National Ind Group</h3>
                 <p>Memimpin manajemen, legalitas, dan strategi bisnis untuk lini usaha National Graphic, Taxidia, dan National Garage.</p>
             </div>
             <div class="card">
+                <i class="fas fa-handshake icon-large"></i>
                 <h3>Real Estate Broker</h3>
                 <p>Mengelola perantara transaksi dan negosiasi properti untuk area Boyolali.</p>
             </div>
         </div>
     </section>
 
+    <!-- Bagian Proyek (Projects) -->
     <section id="projects" class="section">
         <h2 class="section-title">My Projects</h2>
         <div class="grid-container">
@@ -72,16 +84,18 @@
         </div>
     </section>
 
+    <!-- Bagian Kontak -->
     <section id="contact" class="section">
         <h2 class="section-title">Contact Me</h2>
         <form class="contact-form">
             <input type="text" placeholder="Nama Lengkap" required>
-            <input type="text" placeholder="Subjek (misal: Internship / Project)" required>
+            <input type="text" placeholder="Subjek (misal: Project / Kolaborasi)" required>
             <textarea placeholder="Pesan Anda..." rows="5" required></textarea>
             <button type="submit" class="btn-download">Kirim Pesan <i class="fas fa-paper-plane"></i></button>
         </form>
     </section>
 
+    <!-- Footer -->
     <footer>
         <p>&copy; 2026 Waskita Zaenal Abidin. All Rights Reserved.</p>
     </footer>
