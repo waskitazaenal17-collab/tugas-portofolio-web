@@ -1,79 +1,241 @@
-/* Mengatur font dan margin dasar */
+/* =========================================
+   FONDASI & VARIABEL TEMA (LIGHT/DARK)
+========================================= */
+:root {
+    /* Tema Terang (Default) */
+    --bg-color: #f8f9fa;
+    --text-color: #2b2d42;
+    --card-bg: #ffffff;
+    --accent-color: #4a5d4e; /* Olive/Khaki tone */
+    --hover-color: #8d99ae;
+    --nav-bg: rgba(255, 255, 255, 0.95);
+    --border-color: #e0e0e0;
+}
+
+body.dark-mode {
+    /* Tema Gelap */
+    --bg-color: #121212;
+    --text-color: #f8f9fa;
+    --card-bg: #1e1e1e;
+    --accent-color: #f4a261; /* Kontras hangat untuk dark mode */
+    --hover-color: #cccccc;
+    --nav-bg: rgba(18, 18, 18, 0.95);
+    --border-color: #333333;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 body {
-    background-color: #f4f4f9;
-    color: #333;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     line-height: 1.6;
+    scroll-behavior: smooth;
 }
 
-/* Desain Navigasi (Navbar) */
+/* =========================================
+   NAVIGASI (HEADER)
+========================================= */
 header {
-    background: #222;
-    color: #fff;
-    padding: 1rem 0;
-    position: sticky;
+    background: var(--nav-bg);
+    position: fixed;
+    width: 100%;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    backdrop-filter: blur(5px);
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 1rem 2rem;
 }
 
-.navbar h2 {
-    color: #f4a261;
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: var(--accent-color);
 }
 
-.navbar ul {
+.nav-links {
     list-style: none;
     display: flex;
+    gap: 2rem;
 }
 
-.navbar ul li {
-    padding: 0 15px;
-}
-
-.navbar ul li a {
-    color: #fff;
+.nav-links a {
+    color: var(--text-color);
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
 }
 
-.navbar ul li a:hover {
-    color: #f4a261;
+.nav-links a:hover {
+    color: var(--accent-color);
 }
 
-/* Desain Bagian Home/Hero */
-#home {
+.btn-theme {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+/* =========================================
+   BAGIAN HERO (BERANDA)
+========================================= */
+.hero {
     height: 100vh;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     text-align: center;
-    background: #e9ecef;
     padding: 0 2rem;
+    margin-top: 2rem; /* Menyesuaikan agar tidak tertutup navbar */
 }
 
-#home h1 {
-    font-size: 3rem;
+.hero h3 {
+    font-weight: 400;
+    color: var(--hover-color);
     margin-bottom: 10px;
 }
 
-#home p {
-    font-size: 1.2rem;
-    color: #555;
-    margin-bottom: 20px;
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    color: var(--accent-color);
+}
+
+.typing-text {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.social-icons a {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin: 0 10px;
+    transition: transform 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--accent-color);
+    transform: translateY(-5px);
+}
+
+.btn-download {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: var(--accent-color);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.btn-download:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+
+/* =========================================
+   LAYOUT BAGIAN (SECTION) & CARD
+========================================= */
+.section {
+    padding: 80px 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 50px;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.icon-large {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+/* =========================================
+   FORMULIR KONTAK & FOOTER
+========================================= */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background: var(--card-bg);
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: var(--nav-bg);
+    border-top: 1px solid var(--border-color);
+    margin-top: 50px;
 }

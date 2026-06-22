@@ -3,25 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio | Waskita</title>
+    <title>Portofolio | Waskita Zaenal Abidin</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header>
         <nav class="navbar">
-            <h2>Portofolio Waskita</h2>
-            <ul>
+            <div class="logo">WK.</div>
+            <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#cv">Download CV</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
+            <button id="theme-toggle" class="btn-theme"><i class="fas fa-moon"></i></button>
         </nav>
     </header>
 
-    <section id="home">
-        <h1>Halo, Saya Waskita</h1>
-        <p>Mahasiswa Teknologi Rekayasa Otomasi & Tech Enthusiast</p>
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h3>Halo, perkenalkan saya</h3>
+            <h1>Waskita Zaenal Abidin</h1>
+            <h2 class="typing-text">Mahasiswa Teknologi Rekayasa Otomasi</h2>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <br>
+            <a href="assets/CV_Waskita.pdf" download class="btn-download">Download CV <i class="fas fa-download"></i></a>
+        </div>
     </section>
+
+    <section id="experience" class="section">
+        <h2 class="section-title">Experience</h2>
+        <div class="grid-container">
+            <div class="card">
+                <h3>CEO - National Ind Group</h3>
+                <p>Memimpin manajemen, legalitas, dan strategi bisnis untuk lini usaha National Graphic, Taxidia, dan National Garage.</p>
+            </div>
+            <div class="card">
+                <h3>Real Estate Broker</h3>
+                <p>Mengelola perantara transaksi dan negosiasi properti untuk area Boyolali.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <h2 class="section-title">My Projects</h2>
+        <div class="grid-container">
+            <div class="card">
+                <i class="fas fa-microchip icon-large"></i>
+                <h3>Sistem Kendali Boiler (Arduino)</h3>
+                <p>Implementasi sensor thermocouple MAX6675 untuk sistem kontrol suhu berbasis mikrokontroler.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-robot icon-large"></i>
+                <h3>Otomasi Quality Control</h3>
+                <p>Penggunaan Computer Vision untuk inspeksi dan otomasi industri.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-network-wired icon-large"></i>
+                <h3>Integrasi SCADA & PLC</h3>
+                <p>Pembuatan ladder diagram untuk PLC Bosch Rexroth dan Schneider menggunakan ctrlX AUTOMATION.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2 class="section-title">Contact Me</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Nama Lengkap" required>
+            <input type="text" placeholder="Subjek (misal: Internship / Project)" required>
+            <textarea placeholder="Pesan Anda..." rows="5" required></textarea>
+            <button type="submit" class="btn-download">Kirim Pesan <i class="fas fa-paper-plane"></i></button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Waskita Zaenal Abidin. All Rights Reserved.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
